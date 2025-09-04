@@ -1,0 +1,189 @@
+# PromptCraft
+Overview
+PromptCraft is a professional web-based tool designed to help users generate effective prompts for various AI models including ChatGPT, DALL-E, Midjourney, Stable Diffusion, and Google Bard. With its clean, responsive interface and intuitive design, PromptCraft simplifies the process of creating well-structured AI prompts for content creators, developers, and AI enthusiasts.
+
+Features
+Support for multiple AI models (ChatGPT, DALL-E, Midjourney, etc.)
+
+Customizable prompt parameters (type, style, tone, creativity level)
+
+Real-time prompt preview
+
+Example prompts for inspiration
+
+Copy to clipboard functionality
+
+Responsive design that works on mobile, tablet, and desktop
+
+Modern blue and white theme
+
+Toast notifications for user feedback
+
+No backend required (runs entirely in the browser)
+
+Requirements
+PromptCraft is a frontend application that requires only a modern web browser to run. There are no server-side dependencies.
+
+Browser Compatibility
+Chrome (recommended)
+
+Firefox
+
+Safari
+
+Edge
+
+Installation
+Option 1: Direct File Opening
+Download all project files
+
+Open index.html in any modern web browser
+
+Option 2: Web Server Deployment
+For best performance, deploy to a web server:
+
+Upload all files to your web server
+
+Ensure the file structure is maintained
+
+Access via your domain (e.g., www.yourdomain.com/promptcraft)
+
+Option 3: Local Development Server
+For developers who want to modify the code:
+
+Ensure you have Node.js installed
+
+Install a simple HTTP server: npm install -g http-server
+
+Navigate to the project directory
+
+Run: http-server
+
+Open your browser to the provided local address (typically http://localhost:8080)
+
+File Structure
+promptcraft/
+├── index.html          # Main application file
+├── css/
+│   └── style.css      # All styles (also embedded in index.html)
+├── js/
+│   └── script.js      # All JavaScript (also embedded in index.html)
+├── assets/
+│   ├── icons/         # Icon assets (using Font Awesome CDN)
+│   └── images/        # Additional images (if any)
+└── README.txt         # This file
+
+
+Customization Guide
+Changing the Color Theme
+To modify the color scheme, edit the CSS variables in the :root selector:
+:root {
+    --primary: #1a73e8;       /* Main blue color */
+    --primary-light: #e8f0fe; /* Light blue */
+    --secondary: #4285f4;     /* Secondary blue */
+    /* Add your custom colors here */
+}
+
+
+Adding New AI Models
+To add support for additional AI models:
+
+1.Edit the AI Model dropdown in the HTML:
+<select id="ai-model">
+    <!-- Existing options -->
+    <option value="new-model">New Model Name</option>
+</select>
+
+2.Add model-specific instructions in the JavaScript generatePrompt function:
+const modelIntros = {
+    // Existing models
+    'new-model': 'Introduction text for the new model',
+};
+
+
+Modifying Example Prompts
+Edit the examples object in JavaScript to add or modify example prompts:
+const examples = {
+    // Existing examples
+    4: {
+        topic: "Your new topic",
+        type: "appropriate-type",
+        style: "appropriate-style",
+        tone: "appropriate-tone"
+    }
+};
+
+
+Adding New Prompt Types
+To add new prompt types:
+
+1.Add to the Prompt Type dropdown:
+<select id="prompt-type">
+    <!-- Existing options -->
+    <option value="new-type">New Type</option>
+</select>
+
+2.Add type-specific instructions:
+const typeInstructions = {
+    // Existing types
+    'new-type': `Instruction template for the new type`,
+};
+
+
+Customizing Styles
+The application uses CSS variables for easy customization. Key elements to style:
+
+Header: .header class
+
+Cards: .controls, .preview, and .examples classes
+
+Buttons: .btn class
+
+Form elements: select, input, textarea selectors
+
+Usage Instructions
+1.Select your target AI model from the dropdown
+
+2.Choose the type of prompt you want to generate
+
+3.Enter your topic or subject
+
+4.Adjust style, tone, and creativity settings as needed
+
+5.Click "Generate Prompt" to create your customized prompt
+
+6.Use "Copy to Clipboard" to copy the generated prompt
+
+7.Explore example prompts for inspiration
+
+
+Browser Support
+PromptCraft supports all modern browsers that implement:
+
+ES6 JavaScript features
+
+CSS Flexbox and Grid
+
+Clipboard API
+
+License
+This project is available for sale on Codester/ThemeForest. The purchaser receives rights to use the code in personal and commercial projects, but may not resell or redistribute the code.
+
+Support
+For support or questions about customization, please contact the author through the marketplace where you purchased the product.
+
+Changelog
+Version 1.0 (Initial Release)
+Initial implementation with core functionality
+
+Support for 5 AI models
+
+5 prompt types with customization options
+
+Responsive design for all screen sizes
+
+Example prompts section
+
+
+
+Thank you for choosing PromptCraft! We hope this tool enhances your AI prompt creation workflow.
